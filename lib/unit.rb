@@ -13,4 +13,16 @@ class Unit
   def attack!(enemy_unit)
     enemy_unit.damage(3)
   end
+
+  def dead?
+    health_points <= 0
+  end
+
+  def can_attack?
+    !dead?
+  end
+
+  def can_be_attacked?
+    !dead?
+  end
 end
